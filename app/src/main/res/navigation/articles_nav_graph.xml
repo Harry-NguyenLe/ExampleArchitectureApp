@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/listArticleFragment">
+
+    <fragment
+        android:id="@+id/listArticleFragment"
+        android:name="vn.edu.csc.interviewtestapp.ui.articles.listarticle.ListArticleFragment"
+        android:label="ListArticleFragment"
+        tools:layout="@layout/fragment_list_articles">
+        <action
+            android:id="@+id/action_listArticleFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="vn.edu.csc.interviewtestapp.ui.articles.detailarticle.DetailArticleFragment"
+        android:label="DetailArticleFragment"
+        tools:layout="@layout/fragment_detail_article" >
+        <argument
+            android:name="article"
+            app:argType="vn.edu.csc.interviewtestapp.data.model.Article" />
+
+    </fragment>
+
+</navigation>
